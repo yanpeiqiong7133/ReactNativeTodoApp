@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
 		height: 50,
 		borderBottomWidth: 1,
 		borderBottomColor: '#cccccc',
-		marginLeft: 15,
-		marginRight: 15,
+		// marginLeft: 15,
+		// marginRight: 15,
 	},
 	
 	content: {
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
 	  textDecorationLine: 'line-through',
 	},
 	swipeOut: {
-
+	  marginLeft: 18,
+	  marginRight: 18,
 	}
 	
 });
@@ -63,13 +64,14 @@ export default class Todo extends Component {
 		const swipeoutBtns = [{
 		  underlayColor: '#cccccc',
 		  backgroundColor: '#f23030',
+		  borderColor: '#cccccc',
 		  text: '删除',
 		  onPress: () => {
 			todoData.delet(id);
 		  }
 	    }];
 		return (
-		  <Swipeout right={swipeoutBtns} style={styles.swipeOut} backgroundColor="#f9f9f9">
+		  <Swipeout right={swipeoutBtns} style={styles.swipeOut} backgroundColor="#ffffff">
 		  <View style={styles.root}>
 		  	<Circle onPress={this.check} checked={completed} />
 		  	<View style={styles.content}>
